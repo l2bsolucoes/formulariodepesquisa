@@ -1,0 +1,6 @@
+/* Estilo para telas grandes */
+@media (min-width: 1025px){
+    nav{
+        display: block;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="py-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pesquisa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries-lg.css">
+    <link rel="stylesheet" href="css/media-queries-md.css">
+    <link rel="stylesheet" href="css/media-queries-sm.css">
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <nav>
+            <div class="logo">l2bsolucoes</div>
+            <ul>
+                <li><a href="#">Soluções</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Formulário</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--Conteúdo-->
+    <main>
+        <h2>Formulário de Pesquisa</h2>
+        <p><legend>*Campos de preenchimento obrigatório</legend></p>
+        <section class="container">
+            <form action="cadastro.php" method="post">
+                <p>*Nome:</p>
+                <input type="text" name="nome" autocomplete="off" placeholder="Entre com o seu nome" required autofocus>
+
+                <p>*E-mail:</p>
+                <input type="email" name="email" autocomplete="off" required placeholder="seuemail@gmail.com">
+
+                <p>Idade (opcional)</p>
+                <input type="number" name="idade" autocomplete="off" placeholder="Idade">
+
+                <p>*Escolha a opção que melhor descreva o seu momento</p>
+                <input name="escolha" list="lista-escolha" placeholder="Selecione uma opção">
+                <datalist id="lista-escolha">
+                    <option value="Apenas Estudante"></option>
+                    <option value="Trabalho e Estudo"></option>
+                    <option value="Apenas Trabalho"></option>
+                    <option value="Prefiro Não Dizer"></option>
+                    <option value="Outros"></option>
+                </datalist>
+                
+                <p>Você recomendaria estudar programação para um amigo?</p>
+                <input type="radio" name="recomendar" value="Sim" checked>Sim <br>
+                <input type="radio" name="recomendar" value="Talvez">Talvez <br>
+                <input type="radio" name="recomendar" value="Não">Não
+                
+                <p>Qual tipo de programação que você mais gosta?</p>
+                <input type="programacao" list="lista-programacao" placeholder="Selecione uma opção">
+                <datalist id="lista-programacao">
+                    <option value="JS"></option>
+                    <option value="JavaScript"></option>
+                    <option value="VBA"></option>
+                </datalist>
+
+                <p>Qual profissão você gostaria de exercer?</p>
+                <input type="checkbox" name="profissao" value="Front-end">Front-end <br>
+                <input type="checkbox" name="profissao" value="Back-end">Back-end <br>
+                <input type="checkbox" name="profissao" value="FullStack">Full Stack <br>
+                <input type="checkbox" name="profissao" value="Progrmador JS">Programador JS
+
+                <p>Algum comentário ou sugestão?</p>
+                <textarea name="mensagem" rows="5" cols="50" placeholder="Entre com o seu comentário aqui"></textarea>
+                <br> <br>
+                <input type="submit" name="btn-enviar" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+
+    </footer>
+</body>
+</html>
