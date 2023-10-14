@@ -1,6 +1,0 @@
-/* Estilo para telas médias */
-@media (min-width: 769px) and (max-width: 1024px){
-    .menu{
-        display: block;
-    }
-}

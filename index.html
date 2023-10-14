@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Pesquisa</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-queries-lg.css">
-    <link rel="stylesheet" href="css/media-queries-md.css">
-    <link rel="stylesheet" href="css/media-queries-sm.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/media.css">
 </head>
 <body>
     <!--Cabeçalho-->
     <header>
+        <!-- Logo -->
+        <div id="logo">
+            <h1>l2bsolucoes</h1>
+        </div>
+
+        <!-- Menu -->
         <nav>
-            <div class="logo">l2bsolucoes</div>
             <ul>
                 <li><a href="#">Soluções</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Formulário</a></li>
+                <li><a href="#" id="enviar-btn">Já enviou um formulário</a></li>
             </ul>
         </nav>
     </header>
     
     <!--Conteúdo-->
     <main>
-        <h2>Formulário de Pesquisa</h2>
-        <p><legend>*Campos de preenchimento obrigatório</legend></p>
         <section class="container">
+            <h2>Formulário de Pesquisa</h2>
             <form action="cadastro.php" method="post">
-                <p>*Nome:</p>
+                <p>Nome:</p>
                 <input type="text" name="nome" autocomplete="off" placeholder="Entre com o seu nome" required autofocus>
 
-                <p>*E-mail:</p>
+                <p>E-mail:</p>
                 <input type="email" name="email" autocomplete="off" required placeholder="seuemail@gmail.com">
 
                 <p>Idade (opcional)</p>
                 <input type="number" name="idade" autocomplete="off" placeholder="Idade">
 
-                <p>*Escolha a opção que melhor descreva o seu momento</p>
+                <p>Escolha a opção que melhor descreva o seu momento</p>
                 <input name="escolha" list="lista-escolha" placeholder="Selecione uma opção">
                 <datalist id="lista-escolha">
                     <option value="Apenas Estudante"></option>
@@ -69,7 +71,7 @@
                 <p>Algum comentário ou sugestão?</p>
                 <textarea name="mensagem" rows="5" cols="50" placeholder="Entre com o seu comentário aqui"></textarea>
                 <br> <br>
-                <input type="submit" name="btn-enviar" value="Enviar">
+                <input type="submit" name="enviar-btn" value="Enviar">
             </form>
         </section>
     </main>
